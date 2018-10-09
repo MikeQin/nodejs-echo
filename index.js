@@ -10,4 +10,8 @@ app.post("/echo", function(req, res) {
     res.status(200).json({message: 'Hello, ' + req.body.name});
 });
 
+app.get("/", function(req, res) {
+    res.status(200).send('Hello World! from Heroku');
+});
+
 app.listen(port, () => console.log("Listening on port " + port));
